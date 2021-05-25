@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            /* width: 100%;
+            height: 100vh; */
+            font-family: 'Work Sans', sans-serif;
+            font-size: 12px;
+            /* overflow: hidden; */
+            box-sizing: border-box;
+        }
+
+        .juice {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 1;
+        }
+
+
+        .juice img {
+            animation: float 6s ease-in-out infinite;
+            max-height: 600px;
+            margin: auto;
+            display: block;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translate(-50%, -46%);
+            }
+
+            50% {
+                transform: translate(-50%, -54%);
+            }
+
+            100% {
+                transform: translate(-50%, -46%);
+            }
+        }
+
+        .section {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 40px 0px;
+        }
+
+        .content,
+        img {
+            width: 50%;
+        }
+
+        h1,
+        h2 {
+            font-size: 80px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 15px;
+            font-weight: 700;
+            padding: 10px 0px;
+        }
+
+        .more a {
+            text-decoration: none;
+            font-size: 20px;
+            color: #fff;
+            background: #000;
+            padding: 10px 30px;
+            border-radius: 10px;
+            margin-top: 24px;
+
+        }
+
+        .desc {
+            padding-top: 24px;
+        }
+
+        .arrows {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .arrows .next {
+            position: absolute;
+            top: 50%;
+            right: 100px;
+        }
+
+        .arrows .next-one {
+            position: absolute;
+            top: 80%;
+            right: 100px;
+        }
+
+        /* .arrows button {
+                border: 1px solid #999;
+                background: transparent;
+                padding: 20px;
+                outline: none;
+            } */
+
+        .arrows button:hover {
+            color: #fff;
+            background: #000;
+        }
+
+        .active {
+            color: #299ef3 !important;
+            border: 1px solid #999;
+            background: transparent;
+            padding: 20px;
+            outline: none;
+        }
+
+        #tab-div button {
+            color: rgb(158, 138, 138) !important;
+        }
+
+        .contain-flex {
+            display: none;
+        }
+
+        .show {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="tab-section">
+        <section class="section  show contain-flex" id="first">
+            <div class="content">
+                <h1 class="tagline">Find your clean juice</h1>
+
+
+
+                <div class="desc">
+                    <p>
+                        Your <span>healthy</span> life <br>
+                        starts here with us
+                    </p>
+                    <p>
+                        A family owned company founded with the purpose of giving your family access to clean, organic
+                        products
+                        while
+                        you are on the go.
+                    </p>
+                </div>
+            </div>
+
+            <div class="juice-img">
+                <img src="./img/juice.png" alt="">
+            </div>
+
+
+
+
+        </section>
+        <section class="section contain-flex" id="second">
+            <div class="content">
+                <h1 class="tagline">Best juice</h1>
+
+
+                <div class="desc">
+                    <p>
+                        Your <span>healthy</span> life <br>
+                        starts here with us
+                    </p>
+                    <p>
+                        A family owned company founded with the purpose of giving your family access to clean, organic
+                        products
+                        while
+                        you are on the go.
+                    </p>
+                </div>
+            </div>
+
+            <div class="juice-img">
+                <img src="./img/home.png" alt="">
+            </div>
+
+
+
+
+        </section>
+        <div class="arrows" id="tab-div">
+            <!-- <button class="prev"><i class="fa fa-chevron-left"></i></button> -->
+            <button class="next active tab-btn" data-id="first">FIRST</button>
+            <button class="next-one tab-btn" data-id="second">SECOND</button>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
